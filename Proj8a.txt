@@ -1,0 +1,16 @@
+#Author:Ashley Johnson
+#Date: 11/8/2020
+#Description: Program takes as a parameter a string and returns a dictionary that tabulates how many
+# of each letter is in that string.
+
+def count_letters(string):
+    """function takes a string as parameter and returns a dictionary that states how many of each letter
+    is in the string"""
+    numletters = {}
+    for letter in string:
+        letter = letter.upper()
+        if 'A' <= letter <= 'Z':
+            if letter not in numletters:
+                numletters[letter] = 0
+            numletters[letter] += 1
+    return numletters
